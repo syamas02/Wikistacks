@@ -18,12 +18,3 @@ module.exports = app;
 app.get('/', (req, res) => {
   return res.send(main());
 });
-
-models.db
-  .authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.');
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
